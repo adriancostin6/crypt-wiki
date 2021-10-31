@@ -46,5 +46,5 @@ After adding this close and reopen Vim or run the Vim command `:source %` to app
 To install the plugin run `:PlugInstall` Vim command.
 
 After doing this, you should be able to use the plugin as specified in
-[How to use VimWiki](How to use VimWiki). Happy note-taking.
+[How to use VimWiki](Usage.md). Happy note-taking.
 
