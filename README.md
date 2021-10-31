@@ -15,7 +15,7 @@ In order to use this repo you will need:
 
 ## How we got here
 
-If you care for it, you can read the [Backstory](Backstory) of how we got here.
+If you care for it, you can read the [Backstory](Backstory.md) of how we got here.
 I promise not to bore you too much.
 
 ## Stop it! Get some help.
@@ -23,8 +23,8 @@ I promise not to bore you too much.
 All the help you need in order to setup the wiki can be found in the [Tutorial](tutorial/index.md)
 section. Some of the topics included are:
 
-- [How to setup VimWiki](tutorial/How to setup VimWiki)
-- [How to use VimWiki](tutorial/How to use VimWiki)
+- [How to setup VimWiki](tutorial/How to setup VimWiki.md)
+- [How to use VimWiki](tutorial/How to use VimWiki.md)
 - [Encryption/Decryption and Version Control](tutorial/Storage.md)
 
 
