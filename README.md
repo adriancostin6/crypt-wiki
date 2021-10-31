@@ -13,6 +13,13 @@ In order to use this repo you will need:
 - pip : `python -m pip install pip`
 - python-gnupg : `python -m pip install python-gnupg`
 
+## How to use
+
+In order to use the Crypt Wiki locally, run `git clone https://github.com/adriancostin6/crypt-wiki.git`.
+
+If you want to version control your notes like I do, simply fork this repository, clone your fork and enjoy
+version controlled encrypted notes.
+
 ## How we got here
 
 If you care for it, you can read the [Backstory](Backstory.md) of how we got here.
