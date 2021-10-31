@@ -33,6 +33,7 @@ section. Some of the topics included are:
 - [How to setup VimWiki](tutorial/Setup.md)
 - [How to use VimWiki](tutorial/Usage.md)
 - [Encryption/Decryption and Version Control](tutorial/Storage.md)
+- [Vim Integration](tutorial/VimIntegration.md)
 
 
 ## Typical workflow I would use
@@ -90,4 +91,4 @@ file in this directory, which is the Wiki index. You can choose to delete all
 the other files such as the *Backstory.md*, *README.md* or the *tutorial* folder,
 as these have been in order to showcase how the repository works.
 
-Happy wiki-ing!
+**Happy wiki-ing!**
