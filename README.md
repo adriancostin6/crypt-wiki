@@ -23,8 +23,8 @@ I promise not to bore you too much.
 All the help you need in order to setup the wiki can be found in the [Tutorial](tutorial/index.md)
 section. Some of the topics included are:
 
-- [How to setup VimWiki](tutorial/How to setup VimWiki.md)
-- [How to use VimWiki](tutorial/How to use VimWiki.md)
+- [How to setup VimWiki](tutorial/Setup.md)
+- [How to use VimWiki](tutorial/Usage.md)
 - [Encryption/Decryption and Version Control](tutorial/Storage.md)
 
 
