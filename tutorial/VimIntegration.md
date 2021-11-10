@@ -1,22 +1,23 @@
 # Integrating it withing VIM
 
-For a more integrated approach, you can add the following mappings to your .vimrc
+## Step 1 - Setup
+
+Copy the **crypt.vim** file from the repository to your `~/.vim/plugin` folder
+if you are on Linux, or inside '~/vimfiles/plugin` if you are on Windows.
+
+The plugin file can be found under **plugin/crypt.vim**.
+
+## Step 2 - Mappings
+
+Add the following to your .vimrc: 
 
 ```
-"cd to working dir of current file for the current window
-nnoremap <leader>cd :lcd %:h<CR>
-
 "Mapping for encrypting and decrypting files in wiki
-nnoremap <Leader><Leader>e :! python crypt.py -e
-nnoremap <Leader><Leader>d :! python crypt.py -d
+nnoremap <Leader><Leader>e :call Crypt()<CR>
+runtime crypt.vim
 ```
 
-This allows you to do the following sequence of commands to encrypt the 
-folders you chose in the *.cryptfile*:
+## Step 3 - Enjoy
 
-```
-<Leader>ww - open wiki index
-<Leader>cd - change Vim dir to wiki index
-<Leader><Leader>e - encrypt folders
-<Leader><Leader>d - decrypt folders
-```
+After that, just use: `<Leader><Leader>e` to encrypt/decrypt your Wiki
+as specified inside the .cryptfile.

@@ -12,7 +12,7 @@ Version control is done using git and both GitHub/GitLab.
     - Encrypt/Decrypt with python script
     - Add, commit and push
 
-## How to encrypt/decrypt
+## How to encrypt/decrypt from the terminal
 
 - Create .cryptfile (see help section)
 - To encrypt, run `python crypt.py -e`

@@ -83,12 +83,16 @@ you can commit and push to version control as normal.
 Decryption happens in a similar manner. Once you clone the repo, run
 `python crypt.py -d`.
 
+## Copying the plugin file for Vim integration
+
+Described in the [Vim Integration](tutorial/VimIntegration.md) section.
+
 ## Day-to-day use
 
 With the proper setup described in the tutorial, opening Vim and using the 
 VimWiki shortcuts will work out of the box, placing you inside the *index.md*
 file in this directory, which is the Wiki index. You can choose to delete all
-the other files such as the *Backstory.md*, *README.md* or the *tutorial* folder,
+the other files such as the *Backstory.md*, *README.md*, *tutorial* and *plugin* folder,
 as these have been in order to showcase how the repository works.
 
 **Happy wiki-ing!**
