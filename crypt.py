@@ -4,9 +4,15 @@ import getopt, sys
 import os
 
 #############################################
-# Define these for proper encryption!
-gpg = gnupg.GPG(gnupghome=r'path/to/gnupg/folder')
-recipient = "john@mail.com"
+# Define these for proper encryption! If
+# blank homedir does not work, specify it.
+try:
+    #gpg = gnupg.GPG(gnupghome=homedir) 
+    gpg = gnupg.GPG() 
+except TypeError:
+    #gpg = gnupg.GPG(homedir=homedir)
+    gpg = gnupg.GPG()
+recipient = "adriancostin6@gmail.com"
 #############################################
 
 def encrypt(folders):

@@ -1,98 +1,36 @@
-# Crypt Wiki - VimWiki with added support for encryption/decryption
+# Cryptwiki
 
-This project is meant to solve an issue I have ran into recently. I wanted to
+Cryptwiki is meant to solve an issue I have ran into recently. I wanted to
 have a way of version controlling my notes while also retaining my privacy.
 
-## Dependencies
+This repository provides some scripts for version controlling a directory structure, with support for recursive GPG
+encryption via the *crypt.py* script. Version control is supported via the *push/pull-notes* scripts (shell or batch,
+depending on operating system).
 
-In order to use this repo you will need:
+## Possible applications
 
-- Vim
-- VimWiki
-- Python
-- pip : `python -m pip install pip`
-- python-gnupg : `python -m pip install python-gnupg`
+As the name of the repo suggests, the main use-case for which I developed this convenient system is in order to easily
+create and store my notes online. Some of them contain sensitive information, justifying the need for the recursive
+encryption script. 
+
+The workflow I use is based on [vimwiki](https://github.com/vimwiki/vimwiki). Mainly, my notes are organized into separate directories based on the different
+categories I wish to take notes in, then these directories are ecrypted and version controlled and everything is
+integrated nicely with Vim. I have provided instructions for how to achieve this in the [Tutorial](tutorial/index.md) section.
+
+That being said, using Vim is definitely not required, just convenient to me. They are just text files after all, you
+can use any text editor for taking them.
 
 ## How to use
 
-In order to use the Crypt Wiki locally, run `git clone https://github.com/adriancostin6/crypt-wiki.git`.
+- Fork this repository
+- Start taking notes and store them in the arrangement that best suits you
+- Add the folders you wish to encrypt to the *.cryptfile*
+- Use version control scripts to store the notes in the repository. (Tip: Make the repo private :) )
 
-If you want to version control your notes like I do, simply fork this repository, clone your fork and enjoy
-version controlled encrypted notes.
+## Dependencies
 
-## How we got here
-
-If you care for it, you can read the [Backstory](Backstory.md) of how we got here.
-I promise not to bore you too much.
-
-## Stop it! Get some help.
-
-All the help you need in order to setup the wiki can be found in the [Tutorial](tutorial/index.md)
-section. Some of the topics included are:
-
-- [How to setup VimWiki](tutorial/Setup.md)
-- [How to use VimWiki](tutorial/Usage.md)
-- [Encryption/Decryption and Version Control](tutorial/Storage.md)
-- [Vim Integration](tutorial/VimIntegration.md)
-
-
-## Typical workflow I would use
-
-I have provided a couple of placeholder directories for you to see how I would
-typically organize my notes inside the wiki. This however does not mean that you
-shouldn't experiment and find a layout that best fits you.
-
-- [Diary](diary/diary.md)
-- [Personal](personal/index.md)
-- [Work](work/index.md)
-
-
-## .cryptfile and encryption/decryption
-
-After taking some notes and separating them in a workflow like above, say you
-want to mark some of the folders for encryption. Let's assume that you want
-everything under *Work* and *Diary* to be encrypted using GPG. For that you will
-use the *cript.py* script in this repository.
-
-Firstly, you will need to setup a *.cryptfile* that contains two lines in it,
-each specifying the name of a directory you want to encrypt.
-
-An example .cryptfile has been provided that encrypts the work and diary directory.
-
-```
-.cryptfile
-
-work
-diary
-```
-
-Secondly, you want to modify the script to include the GPG key identifier and
-the path to where your GPG folder is stored:
-
-```
-#############################################
-# Define these for proper encryption!
-gpg = gnupg.GPG(gnupghome=r'path/to/folder')
-recipient = "john@mail.com"
-#############################################
-```
-
-Lastly, to encrypt run `python crypt.py -e`. After the files have been encrypted
-you can commit and push to version control as normal.
-
-Decryption happens in a similar manner. Once you clone the repo, run
-`python crypt.py -d`.
-
-## Copying the plugin file for Vim integration
-
-Described in the [Vim Integration](tutorial/VimIntegration.md) section.
-
-## Day-to-day use
-
-With the proper setup described in the tutorial, opening Vim and using the 
-VimWiki shortcuts will work out of the box, placing you inside the *index.md*
-file in this directory, which is the Wiki index. You can choose to delete all
-the other files such as the *Backstory.md*, *README.md*, *tutorial* and *plugin* folder,
-as these have been in order to showcase how the repository works.
+- Python
+- pip : `python -m pip install pip`
+- python-gnupg : `python -m pip install python-gnupg`
 
 **Happy wiki-ing!**
