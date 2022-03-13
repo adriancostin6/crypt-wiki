@@ -1,5 +1,5 @@
 #!/bin/sh
 
-python crypt.py -e
+git checkout .
 git pull
 python crypt.py -d
